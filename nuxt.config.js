@@ -20,9 +20,9 @@ export default {
 
   loading: {color: '#409EFF'},
 
-  /*serverMiddleware: {
-    '/api': '~/api'
-  },*/
+  serverMiddleware: {
+    '/': '~/api'
+  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
