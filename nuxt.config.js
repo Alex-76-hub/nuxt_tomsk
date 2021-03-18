@@ -20,9 +20,9 @@ export default {
 
   loading: {color: '#409EFF'},
 
-  /*serverMiddleware: {
-    '/': '~/api'
-  },*/
+  serverMiddleware: {
+    '/api': '~/api'
+  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -51,6 +51,7 @@ export default {
 //axios config
   axios: {
    baseURL: process.env.BASE_URL || 'http://localhost:3000',
+   //baseURL: 'http://localhost:3000',
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

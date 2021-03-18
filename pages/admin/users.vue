@@ -49,7 +49,6 @@ export default {
     onSubmit() {
       this.$refs.form.validate(async valid => {
         if (valid) {
-
           const formData = {
             login: this.controls.login,
             password: this.controls.password

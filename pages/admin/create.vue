@@ -45,7 +45,7 @@ export default {
   middleware: ['admin-auth'],
   data() {
     return {
-      image: null,
+      image: '',
       previewDialog: false,
       loading: false,
       controls: {
@@ -65,7 +65,7 @@ export default {
   methods: {
     onSubmit() {
       this.$refs.form.validate(async valid => {
-        if (valid && this.image) {
+        if (valid) { // && this.image
           const formData = {
             text: this.controls.text,
             title: this.controls.title,
@@ -79,7 +79,7 @@ export default {
               this.$message.success('Статья успешно добавлена!')
               this.controls.text = null
               this.controls.title = null
-              this.image = null
+              this.image = ''
               this.$refs.upload.clearFiles()
             }, 1000)
           } catch (e) {

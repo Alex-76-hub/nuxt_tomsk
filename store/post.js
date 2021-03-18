@@ -29,7 +29,9 @@ export const actions = {
       fd.append('text', text)
       fd.append('image', image, image.name)
 
-      return await this.$axios.$post('/api/admin/create', fd)
+      //console.log();
+
+      return await this.$axios.$post('/api/post', fd)
     } catch (e) {
       commit('setError', e, {root: true})
       throw e
@@ -41,8 +43,6 @@ export const actions = {
   async deletePost({}, id) {
 
   },
-
-
 }
 
 export const getters = {}
